@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TKA Matematika Kelas 7 - Bilangan Bulat</title>
+<style>
+:root{--ink:#152033;--muted:#61708a;--paper:#f7f3ea;--card:#fff;--accent:#2d5bff;--accent2:#00a98f;--gold:#d9a441;--line:#d9dee8;--danger:#c94a4a;--shadow:0 12px 35px rgba(22,31,52,.12)}
+*{box-sizing:border-box} body{margin:0;font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:radial-gradient(circle at 10% 10%,#dfe8ff 0 12%,transparent 30%),linear-gradient(135deg,#eef2f7,#dfe6f0 55%,#f6f0df);min-height:100vh}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:linear-gradient(rgba(20,30,50,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(20,30,50,.08) 1px,transparent 1px);background-size:28px 28px}
+.app{max-width:1100px;margin:auto;padding:24px}.panel{background:rgba(255,255,255,.93);border:1px solid rgba(255,255,255,.8);box-shadow:var(--shadow);border-radius:24px;overflow:hidden}.hero{padding:34px;position:relative;background:linear-gradient(125deg,#101b36,#203c72 55%,#304a87);color:white}.hero:after{content:"∑  π  √  ∞  01  10";position:absolute;right:28px;top:22px;font:700 24px/1.5 'Courier New',monospace;opacity:.15;letter-spacing:7px;max-width:330px}.seal{display:inline-flex;width:68px;height:68px;border-radius:50%;align-items:center;justify-content:center;border:2px solid #e6c36a;box-shadow:0 0 0 5px rgba(230,195,106,.12);font-size:27px;margin-bottom:15px}.eyebrow{font:700 12px/1.2 Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#e6c36a}.hero h1{margin:7px 0;font-size:clamp(28px,5vw,48px);line-height:1.05}.hero h2{margin:8px 0 0;font-size:18px;font-weight:normal;color:#d9e5ff}.identity{padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:18px}.field label{display:block;font:bold 12px Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:7px}.field input{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:12px;font-size:16px;background:#fbfcff}.instructions{margin:0 28px 24px;padding:18px;border-left:5px solid var(--gold);background:#fbf7ea;border-radius:10px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 28px 24px}.stat{padding:14px;border:1px solid var(--line);border-radius:14px;background:#fff;text-align:center}.stat b{display:block;font:700 22px Arial,sans-serif;color:var(--accent)}.stat span{font:12px Arial,sans-serif;color:var(--muted)}
+.content{padding:28px}.section-title{display:flex;align-items:center;gap:10px;margin:4px 0 18px}.section-title .n{width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font:bold 14px Arial}.question{border:1px solid var(--line);border-radius:18px;padding:20px;margin:16px 0;background:#fff;break-inside:avoid}.qhead{display:flex;justify-content:space-between;gap:12px;margin-bottom:10px}.qnum{font:bold 13px Arial;color:var(--accent)}.badge{font:700 11px Arial;text-transform:uppercase;letter-spacing:.7px;border:1px solid var(--line);border-radius:999px;padding:5px 9px;color:var(--muted)}.qtext{font-size:18px;line-height:1.55;margin-bottom:14px}.options{display:grid;gap:9px}.option{display:flex;gap:10px;align-items:flex-start;padding:11px 13px;border:1px solid #e1e5ec;border-radius:11px;cursor:pointer;transition:.15s}.option:hover{border-color:#a9b9ef;background:#f6f8ff}.option input{margin-top:4px}.tf{display:flex;gap:10px}.tf label{flex:1}.essay{width:100%;min-height:110px;border:1px solid var(--line);border-radius:12px;padding:12px;font:16px Georgia;background:#fcfdff}.score-input{width:110px;padding:8px;border:1px solid var(--line);border-radius:8px}.actions{display:flex;flex-wrap:wrap;gap:10px;padding:25px 28px;border-top:1px solid var(--line);background:#fafbfd}.btn{border:0;border-radius:12px;padding:12px 16px;font:bold 14px Arial;cursor:pointer}.primary{background:var(--accent);color:white}.secondary{background:#e9edf5;color:var(--ink)}.green{background:var(--accent2);color:white}.gold{background:#d9a441;color:#17213b}.result{display:none;margin:24px 28px 30px;border:2px solid #1c2b4a;border-radius:18px;overflow:hidden}.result.show{display:block}.result-head{padding:22px;background:#101b36;color:#fff}.result-head h2{margin:0 0 5px}.result-body{padding:22px;background:#fff}.bigscore{font:bold 54px Arial;color:var(--accent);margin:0}.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:15px 0}.mini{border:1px solid var(--line);border-radius:12px;padding:13px}.mini b{display:block;font:700 20px Arial}.mini span{font:12px Arial;color:var(--muted)}table{width:100%;border-collapse:collapse;font:13px Arial}th,td{border:1px solid var(--line);padding:8px;text-align:left}th{background:#f1f4fa}.note{font:13px Arial;color:var(--muted);line-height:1.5}.answer-review{margin-top:22px}.correct{color:#087b62}.wrong{color:var(--danger)}.hidden{display:none}.print-only{display:none}
+@media(max-width:720px){.identity,.stats,.result-grid{grid-template-columns:1fr 1fr}.stats .stat:last-child{grid-column:span 2}.hero{padding:25px}.content{padding:20px}.actions{padding:20px}.qtext{font-size:16px}}
+@media print{body{background:#fff}.app{max-width:none;padding:0}.panel{box-shadow:none;border:0}.hero{color:#000;background:#fff;border-bottom:3px double #111}.hero:after{display:none}.seal{border-color:#111;box-shadow:none}.eyebrow,.hero h2{color:#000}.identity{padding:15px 0}.instructions,.stats,.actions{display:none}.content{padding:0}.question{box-shadow:none}.result{display:block!important;margin:20px 0}.print-only{display:block}.no-print{display:none!important}.essay{min-height:90px}.option{border-color:#bbb}}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="panel">
+<header class="hero">
+  <div class="seal">∑</div><div class="eyebrow">Asesmen Tengah Semester Ganjil</div>
+  <h1>MATEMATIKA KELAS 7</h1><h2>Model TKA • BILANGAN BULAT</h2>
+  <p style="font:14px Arial;margin:20px 0 0;color:#cdd9f4">Pengembang: <b>NUR WAKHID, S.Pd</b> • SMP Negeri 2 Karangbinangun</p>
+</header>
+<section class="identity">
+  <div class="field"><label>Nama Siswa</label><input id="nama" placeholder="Tuliskan nama lengkap"></div>
+  <div class="field"><label>Kelas</label><input id="kelas" placeholder="Contoh: 7A"></div>
+  <div class="field"><label>No. Absen</label><input id="absen" placeholder="Contoh: 12"></div>
+  <div class="field"><label>Tanggal</label><input id="tanggal" type="date"></div>
+</section>
+<div class="instructions"><b>Petunjuk:</b> Kerjakan semua soal. Pilihan Ganda dan Benar/Salah dinilai otomatis. Untuk Uraian, tuliskan jawaban dan berikan skor guru pada kolom skor uraian (0–8) setelah diperiksa. Nilai akhir dihitung dalam skala 100.</div>
+<div class="stats"><div class="stat"><b>25</b><span>Total Soal</span></div><div class="stat"><b>15</b><span>Pilihan Ganda</span></div><div class="stat"><b>5</b><span>Benar/Salah</span></div><div class="stat"><b>5</b><span>Uraian HOTS</span></div></div>
+<div id="questions" class="content"></div>
+<div class="actions no-print">
+ <button class="btn primary" onclick="hitung()">✓ Lihat Nilai</button>
+ <button class="btn green" onclick="window.print()">🖨 Cetak Soal / Hasil</button>
+ <button class="btn gold" onclick="downloadCSV()">⇩ Ekspor Hasil CSV</button>
+ <button class="btn secondary" onclick="resetForm()">↻ Reset</button>
+</div>
+<section id="result" class="result">
+ <div class="result-head"><h2>HASIL PENILAIAN</h2><div id="resultStudent"></div></div>
+ <div class="result-body">
+  <p class="bigscore" id="finalScore">0</p><p id="predicate"></p>
+  <div class="result-grid"><div class="mini"><b id="objScore">0/60</b><span>Skor objektif</span></div><div class="mini"><b id="essayScore">0/40</b><span>Skor uraian</span></div><div class="mini"><b id="answered">0/25</b><span>Terjawab</span></div></div>
+  <p class="note">Catatan: skor uraian dimasukkan guru pada masing-masing soal dengan rentang 0–8. Total nilai = (skor objektif + skor uraian) dari maksimum 100.</p>
+  <div class="answer-review"><h3>Rekap Jawaban</h3><table><thead><tr><th>No</th><th>Jenis</th><th>Kesulitan</th><th>Jawaban</th><th>Kunci/Skor</th></tr></thead><tbody id="reviewBody"></tbody></table></div>
+ </div>
+</section>
+</div></div>
+<script>
+const questions=[
+{type:'pg',d:'Mudah',q:'Suhu di sebuah kota pada pagi hari adalah −3°C. Siang hari naik 8°C. Berapa suhu siang hari?',o:['−11°C','−5°C','5°C','11°C'],a:2,e:'−3 + 8 = 5.'},
+{type:'pg',d:'Mudah',q:'Hasil dari −12 + 7 adalah …',o:['−19','−5','5','19'],a:1,e:'−12 + 7 = −5.'},
+{type:'pg',d:'Mudah',q:'Bilangan yang nilainya paling besar adalah …',o:['−8','−3','−1','−6'],a:2,e:'Di antara bilangan negatif, yang paling dekat dengan nol adalah yang terbesar.'},
+{type:'pg',d:'Mudah',q:'Hasil dari 15 − 23 adalah …',o:['−38','−8','8','38'],a:1,e:'15 − 23 = −8.'},
+{type:'pg',d:'Mudah',q:'Urutan bilangan −2, 5, −7, 0 dari terkecil ke terbesar adalah …',o:['5, 0, −2, −7','−7, −2, 0, 5','−2, −7, 0, 5','0, −2, 5, −7'],a:1,e:'Urutan pada garis bilangan dari kiri ke kanan: −7, −2, 0, 5.'},
+{type:'pg',d:'Sedang',q:'Sebuah lift berada di lantai −2. Lift naik 7 lantai, lalu turun 4 lantai. Lift berhenti di lantai …',o:['−13','−1','1','9'],a:2,e:'−2 + 7 − 4 = 1.'},
+{type:'pg',d:'Sedang',q:'Hasil dari (−6) × 4 + 10 adalah …',o:['−34','−14','14','34'],a:1,e:'(−6)×4 = −24, lalu −24 + 10 = −14.'},
+{type:'pg',d:'Sedang',q:'Hasil dari 48 ÷ (−6) − (−5) adalah …',o:['−13','−3','3','13'],a:1,e:'48÷(−6)=−8; −8−(−5)=−3.'},
+{type:'pg',d:'Sedang',q:'Rina memiliki saldo −Rp25.000. Ia menerima uang Rp40.000. Saldo Rina sekarang adalah …',o:['−Rp65.000','−Rp15.000','Rp15.000','Rp65.000'],a:2,e:'−25.000 + 40.000 = 15.000.'},
+{type:'pg',d:'Sedang',q:'Nilai x yang memenuhi x − 9 = −4 adalah …',o:['−13','−5','5','13'],a:2,e:'x = −4 + 9 = 5.'},
+{type:'pg',d:'Sedang',q:'Hasil dari −3 × (−5) − 7 adalah …',o:['−22','−8','8','22'],a:2,e:'−3×−5=15; 15−7=8.'},
+{type:'pg',d:'Sedang',q:'Suhu mula-mula −6°C. Suhu turun 5°C kemudian naik 12°C. Suhu akhirnya …',o:['−23°C','−11°C','1°C','11°C'],a:2,e:'−6−5+12=1°C.'},
+{type:'pg',d:'Sedang',q:'Manakah pernyataan yang benar?',o:['−7 > −2','−4 < −9','−3 > −5','0 < −1'],a:2,e:'−3 berada di kanan −5 pada garis bilangan, sehingga −3 > −5.'},
+{type:'pg',d:'Sedang',q:'Jika a = −4 dan b = 6, nilai a × b − a adalah …',o:['−28','−20','20','28'],a:1,e:'(−4×6)−(−4)=−24+4=−20.',},
+{type:'pg',d:'Sedang',q:'Sebuah permainan memberi +5 poin untuk jawaban benar dan −3 poin untuk jawaban salah. Budi benar 7 kali dan salah 4 kali. Skornya …',o:['23','35','47','59'],a:0,e:'7×5 + 4×(−3) = 35−12 = 23.'},
+{type:'tf',d:'Sedang',q:'Pernyataan: −18 + 25 = 7.',a:true,e:'Benar, karena 25−18=7.'},
+{type:'tf',d:'Sedang',q:'Pernyataan: hasil dari (−9) × (−4) adalah −36.',a:false,e:'Salah. Hasil perkalian dua bilangan negatif adalah positif: 36.'},
+{type:'tf',d:'Sedang',q:'Pernyataan: −15 ÷ 3 = −5.',a:true,e:'Benar.'},
+{type:'tf',d:'Sedang',q:'Pernyataan: −2 lebih kecil daripada −8.',a:false,e:'Salah. −2 lebih besar daripada −8 karena lebih dekat ke nol.'},
+{type:'tf',d:'Sedang',q:'Pernyataan: 4 − (−7) = −3.',a:false,e:'Salah. 4−(−7)=4+7=11.'},
+{type:'essay',d:'Sulit/HOTS',q:'Sebuah penyelam berada 18 m di bawah permukaan laut. Ia naik 7 m, turun lagi 12 m, lalu naik 15 m. Tentukan posisi akhir penyelam terhadap permukaan laut dan jelaskan langkah perhitungannya.',a:'−8 m; model: −18 + 7 − 12 + 15 = −8.',e:'Posisi akhir −8 m, artinya 8 meter di bawah permukaan laut.'},
+{type:'essay',d:'Sulit/HOTS',q:'Dalam sebuah kuis, jawaban benar bernilai +4, salah −2, dan kosong 0. Dari 10 soal, Sinta benar 6, salah 3, kosong 1. Hitung skor Sinta dan jelaskan apakah skor tersebut positif atau negatif.',a:'18; 6×4−3×2=18.',e:'Skor = 24−6=18, jadi positif.'},
+{type:'essay',d:'Sulit/HOTS',q:'Sebuah toko mencatat perubahan stok: Senin −12 barang, Selasa +25, Rabu −18, Kamis +10. Jika stok awal 40 barang, berapa stok akhir? Tunjukkan strategi perhitungan.',a:'45 barang; 40−12+25−18+10=45.',e:'Stok akhir 45 barang.'},
+{type:'essay',d:'Sulit/HOTS',q:'Dua siswa menghitung −8 − (−13). Siswa A menjawab −21, siswa B menjawab 5. Siapa yang benar? Gunakan sifat operasi bilangan bulat untuk membuktikan.',a:'Siswa B; −8−(−13)=−8+13=5.',e:'Mengurangkan bilangan negatif sama dengan menambahkan lawannya.'},
+{type:'essay',d:'Sulit/HOTS',q:'Sebuah ekspedisi berada di titik −5 pada garis bilangan. Mereka bergerak 3 langkah ke kanan, 10 langkah ke kiri, lalu 8 langkah ke kanan. Tentukan titik akhir dan jelaskan bagaimana kamu dapat memeriksa kebenaran jawaban.',a:'−4; −5+3−10+8=−4.',e:'Titik akhir −4. Pemeriksaan dapat dilakukan dengan garis bilangan atau menjumlahkan perpindahan bersih +1.'}
+];
+
+function render(){
+ const root=document.getElementById('questions'); let html='';
+ let last=''; questions.forEach((x,i)=>{
+  const n=i+1; if(x.type!==last){html+=`<div class="section-title"><div class="n">${x.type==='pg'?'A':x.type==='tf'?'B':'C'}</div><h2>${x.type==='pg'?'Pilihan Ganda':x.type==='tf'?'Benar / Salah':'Uraian'}</h2></div>`;last=x.type;}
+  html+=`<article class="question"><div class="qhead"><span class="qnum">SOAL ${n}</span><span class="badge">${x.d}</span></div><div class="qtext">${x.q}</div>`;
+  if(x.type==='pg') html+=`<div class="options">${x.o.map((v,j)=>`<label class="option"><input type="radio" name="q${n}" value="${j}"><span><b>${String.fromCharCode(65+j)}.</b> ${v}</span></label>`).join('')}</div>`;
+  if(x.type==='tf') html+=`<div class="tf"><label class="option"><input type="radio" name="q${n}" value="true"><span><b>Benar</b></span></label><label class="option"><input type="radio" name="q${n}" value="false"><span><b>Salah</b></span></label></div>`;
+  if(x.type==='essay') html+=`<textarea class="essay" id="essay${n}" placeholder="Tuliskan proses dan jawabanmu..."></textarea><div style="margin-top:10px;font:13px Arial"><label><b>Skor guru (0–8): </b><input class="score-input" type="number" id="score${n}" min="0" max="8" value="0"></label></div>`;
+  html+=`<div class="note no-print" style="margin-top:10px">${x.type==='essay'?'Uraian dinilai guru.':'Bobot: 4 poin.'}</div></article>`;
+ }); root.innerHTML=html;
+}
+function val(n){const r=document.querySelector(`input[name=q${n}]:checked`);return r?r.value:''}
+function hitung(){
+ let obj=0, answered=0, rows='';
+ questions.forEach((x,i)=>{const n=i+1; let ans='—',key=''; if(x.type==='pg'){ans=val(n);if(ans!=='')answered++;if(ans!==''){if(+ans===x.a)obj+=4;key=String.fromCharCode(65+x.a)}}else if(x.type==='tf'){ans=val(n);if(ans!=='')answered++;if(ans!==''){if((ans==='true')===x.a)obj+=4;key=x.a?'Benar':'Salah'}}else{ans=(document.getElementById('essay'+n).value||'').trim();if(ans)answered++;const s=Math.max(0,Math.min(8,Number(document.getElementById('score'+n).value)||0));obj+=0;key=s+'/8'} rows+=`<tr><td>${n}</td><td>${x.type==='pg'?'Pilihan Ganda':x.type==='tf'?'Benar/Salah':'Uraian'}</td><td>${x.d}</td><td>${escapeHtml(ans||'—')}</td><td>${key}</td></tr>`});
+ let essay=0;questions.forEach((x,i)=>{if(x.type==='essay')essay+=Math.max(0,Math.min(8,Number(document.getElementById('score'+(i+1)).value)||0))*1;});
+ const final=obj+essay; document.getElementById('result').classList.add('show');document.getElementById('finalScore').textContent=final.toFixed(0);document.getElementById('objScore').textContent=obj+'/60';document.getElementById('essayScore').textContent=essay+'/40';document.getElementById('answered').textContent=answered+'/25';document.getElementById('resultStudent').textContent=`${document.getElementById('nama').value||'Nama belum diisi'} • Kelas ${document.getElementById('kelas').value||'—'} • No. Absen ${document.getElementById('absen').value||'—'}`;document.getElementById('predicate').textContent=final>=86?'Predikat: Sangat Baik':final>=76?'Predikat: Baik':final>=66?'Predikat: Cukup':'Predikat: Perlu Bimbingan';document.getElementById('reviewBody').innerHTML=rows;document.getElementById('result').scrollIntoView({behavior:'smooth'});
+}
+function escapeHtml(s){return s.replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+function downloadCSV(){
+ hitung(); let lines=[['Nama Siswa','Kelas','No Absen','Tanggal','Nilai Akhir','Skor Objektif','Skor Uraian'].join(',')];let nama=document.getElementById('nama').value,kelas=document.getElementById('kelas').value,absen=document.getElementById('absen').value,tgl=document.getElementById('tanggal').value;let final=document.getElementById('finalScore').textContent,obj=document.getElementById('objScore').textContent.replace('/60',''),essay=document.getElementById('essayScore').textContent.replace('/40','');lines.push([nama,kelas,absen,tgl,final,obj,essay].map(csv).join(','));questions.forEach((x,i)=>{let n=i+1,ans=x.type==='essay'?document.getElementById('essay'+n).value:val(n);lines.push([n,x.type,x.d,ans].map(csv).join(','))});const blob=new Blob([lines.join('\n')],{type:'text/csv;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='hasil_TKA_Matematika_Kelas7.csv';a.click();URL.revokeObjectURL(a.href)}
+function csv(v){return '"'+String(v??'').replaceAll('"','""')+'"'}
+function resetForm(){if(confirm('Reset semua jawaban dan data siswa?'))location.reload()}
+document.getElementById('tanggal').value=new Date().toISOString().slice(0,10);render();
+</script>
+</body>
+</html>
